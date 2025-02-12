@@ -22,13 +22,12 @@ public class Banco {
         char resp = sc.next().charAt(0);
         double balance = 0;
         Dados dados;
-        if (resp == 'y'){
+        if (resp == 'y') {
             System.out.print("Enter initial deposit value: ");
-             balance = sc.nextDouble();
-             dados = new Dados(name,accountNumber,balance);
-        }
-        else {
-            dados = new Dados(name,accountNumber);
+            balance = sc.nextDouble();
+            dados = new Dados(name, accountNumber, balance);
+        } else {
+            dados = new Dados(name, accountNumber);
         }
 
 
@@ -48,10 +47,10 @@ public class Banco {
         System.out.print("Enter a withdraw  value:");
         System.out.println("Updated account data:");
         balance = sc.nextDouble();
-        if(balance >0){
+        if (balance > 0) {
             dados.withdraw(balance);
             System.out.println(dados);
-        }else {
+        } else {
             System.out.println("Invalid withdrawal amount.");
         }
 

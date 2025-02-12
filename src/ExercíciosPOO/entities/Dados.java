@@ -14,7 +14,7 @@ public class Dados {
     public Dados(String name, int accountNumber) {
         this.name = name;
         this.accountNumber = accountNumber;
-        this.balance =0;
+        this.balance = 0;
     }
 
     public String getName() {
@@ -35,45 +35,29 @@ public class Dados {
     }
 
 
+    public void deposit(double amount) {
 
-
-
-
-    public void deposit(double amount){
-
-        if (amount >0){
+        if (amount > 0) {
             balance += amount;
 
-        }else {
+        } else {
             System.out.println("Invalid deposit amount.");
         }
 
     }
-    public void withdraw(double amount){
-        if (amount>0){
-            balance -=amount +5;
 
-        }else {
+    public void withdraw(double amount) {
+        if (amount > 0) {
+            balance -= amount + 5;
+
+        } else {
             System.out.println("Invalid withdraw amount.");
         }
 
     }
-public String toString(){
-        return "Account: "+
-                accountNumber+","+" "+
-                "Holder: "+name+","+
-                "Balance: $ "+
-                String.format("%.2f",balance);
-}
 
-
-
-
-
-
-
-
-
-
+    public String toString() {
+        return "Account: " + accountNumber + "," + " " + "Holder: " + name + "," + "Balance: $ " + String.format("%.2f", balance);
+    }
 }
 
